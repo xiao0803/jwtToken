@@ -1,0 +1,11 @@
+{
+  "env": {
+    "CLAUDE_CODE_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe"
+  },
+  "hooks": {
+    "post_commit": {
+      "command": "bash .claude/hooks/post-edit.sh",
+      "description": "代码提交后自动运行测试"
+    }
+  }
+}
