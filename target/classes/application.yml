@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+jwt:
+  secret: f26e587c28064d0e855e72c0a6a0e618
+  expire-time: 3600000
+
+spring:
+  application:
+    name: spring-token
