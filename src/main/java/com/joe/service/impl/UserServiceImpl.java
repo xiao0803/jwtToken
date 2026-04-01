@@ -2,6 +2,7 @@ package com.joe.service.impl;
 
 import com.joe.entity.User;
 import com.joe.service.IUserService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -15,14 +16,15 @@ import java.util.concurrent.ConcurrentHashMap;
 public class UserServiceImpl implements IUserService {
 
     private static final Map<String, User> USER_DB = new ConcurrentHashMap<>();
+    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     static {
         User user = new User();
         user.setId("2019");
         user.setName("joe");
         user.setAge(18);
+        user.setPassword(encoder.encode("joe123"));
         USER_DB.put("joe", user);
-
     }
 
     @Override
@@ -34,8 +36,7 @@ public class UserServiceImpl implements IUserService {
         if (user == null) {
             return false;
         }
-        return password.equals(user.getName() + "123");
-
+        return encoder.matches(password, user.getPassword());
     }
 
     @Override
