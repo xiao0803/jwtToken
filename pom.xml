@@ -12,11 +12,11 @@
     </parent>
 
     <groupId>com.joe</groupId>
-    <artifactId>spring-token</artifactId>
+    <artifactId>jwtToken</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>spring-token</name>
+    <name>jwtToken</name>
     <description>Spring Boot JWT Authentication</description>
 
     <properties>
@@ -75,7 +75,7 @@
     </dependencies>
 
     <build>
-        <finalName>spring-token</finalName>
+        <finalName>jwtToken</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

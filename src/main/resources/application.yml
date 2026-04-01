@@ -7,4 +7,4 @@ jwt:
 
 spring:
   application:
-    name: spring-token
+    name: jwtToken

@@ -1,4 +1,4 @@
-# spring-token
+# jwtToken
 
 基于 Spring Boot 3.x + JWT 的 Token 身份认证示例项目。
 
@@ -99,7 +99,7 @@ access_token: <JWT_TOKEN>
 ```bash
 # JDK 17+ required
 mvn clean package
-java -jar target/spring-token.jar
+java -jar target/jwtToken.jar
 
 # 或使用 Maven
 mvn spring-boot:run
